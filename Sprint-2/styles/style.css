@@ -279,6 +279,12 @@ body {
   }
 }
 
+.hero2__song {
+  -webkit-box-shadow: #EFEFEF;
+          box-shadow: #EFEFEF;
+  widows: 40%;
+}
+
 .hero2__slogan {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,10 +297,6 @@ body {
   font-size: 1rem;
   position: absolute;
   text-shadow: 2px solid grey 0.2;
-}
-
-.hero2__slogan__slogan2 p {
-  font-size: 32px;
 }
 
 @media screen and (min-width: 425px) {
@@ -323,6 +325,11 @@ body {
     padding: 11rem 55rem 16rem 8rem;
     font-size: 3rem;
   }
+}
+
+.hero2__slogna2 {
+  color: white;
+  font-size: 5px;
 }
 
 .details {
@@ -651,6 +658,12 @@ p {
   }
 }
 
+.shows {
+  padding: 16px;
+  margin: 16px;
+  border-bottom: solid 2px rgba(128, 128, 128, 0.3);
+}
+
 .shows__header {
   margin: 32px auto 40px 16px;
 }
@@ -659,7 +672,7 @@ p {
   font-size: 12px;
   color: grey;
   font-family: 'regular';
-  margin: 0 auto 24px 16px;
+  margin: 16px auto 24px 16px;
 }
 
 .shows__info2 {
@@ -675,13 +688,12 @@ p {
 }
 
 .shows__button {
-  border-radius: 7px;
   background-color: black;
   width: 288px;
   height: 48px;
   color: white;
   font-size: 85%;
-  margin: 0 16px 16px 16px;
+  border-radius: 5px;
 }
 
 .footer {
@@ -696,9 +708,15 @@ p {
   width: 100%;
   background-color: black;
   color: white;
-  /*@media screen and (min-width:426px) {
-        flex-flow: row wrap;  
-    }*/
+}
+
+@media screen and (min-width: 426px) {
+  .footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
 }
 
 .footer__logo {
@@ -774,24 +792,6 @@ p {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 50%;
-  /*img{
-                display: flex;
-
-                @media screen and (min-width:426px){
-                    width: 21px;
-                }
-    
-                @media screen and (min-width:769px){
-                    width: 21px;
-                }
-            }*/
-  /*@media screen and (min-width:426px){
-                position: relative;
-            }
-
-            @media screen and (min-width:769px){
-                position: relative;
-            }*/
 }
 
 @media screen and (min-width: 426px) {
