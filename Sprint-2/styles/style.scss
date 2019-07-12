@@ -47,7 +47,7 @@ body {
 
     &__menu {
         margin: 0 auto;
-       
+        border: 2px solid $background-color;
     }
   }
 
@@ -80,6 +80,7 @@ body {
     justify-content: space-around;
     font-family: 'demi';
     color:$font-color;
+  
 
 
     @media screen and (min-width:426px){
@@ -96,6 +97,7 @@ body {
 
     &__link1{
         width:160px;
+        border: black 2px  solid;
     }
 
     a{
@@ -103,12 +105,32 @@ body {
         color:$font-color;
 
         &:hover{
-            border-bottom: $font-color 7px solid;
+            border-bottom: $font-color 2px solid;
             padding: 16px;
         }
 
         &:active{
-            border-bottom: $font-color 7px solid;
+            border-bottom: $font-color 2px solid;
+        }
+
+    }
+
+    &__link2{
+        width:160px;
+        border: black 2px  solid;
+    }
+
+    a{
+        text-decoration: none;
+        color:$font-color;
+
+        &:hover{
+            border-bottom: $font-color 2px solid;
+            padding: 16px;
+        }
+
+        &:active{
+            border-bottom: $font-color 2px solid;
         }
 
     }

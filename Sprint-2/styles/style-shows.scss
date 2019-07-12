@@ -1,6 +1,29 @@
+@font-face{
+    font-family:"bold";
+    src: url('../Fonts/Linotype\ -\ AvenirNextLTPro-Bold.otf') format('opentype');
+}
+
+@font-face{
+    font-family: "demi";
+    src: url('../Fonts/Linotype\ -\ AvenirNextLTPro-Demi.otf') format('opentype');
+}
+
+@font-face{
+    font-family: "regular";
+    src: url('../Fonts/Linotype\ -\ AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@mixin header-footer-style {
+    display: flex;
+    height:auto;
+    flex-direction: column;
+    width: 100%;
+    background-color: $background-color;
+    
+}
 $background-color: black;
 $font-color: white;
-
+$header-text-shadow:2px solid grey 0.2;
 .hero2 {
     display: flex;
 
@@ -8,21 +31,14 @@ $font-color: white;
         height: 472px;
         width: 100%;
         object-fit: cover;
-        //background-image:url(../images/shows.jpg);
     }
     &__slogan {
-        
-        /*flex-flow: row wrap;
-        font-display:'regular';
-        font-size: 1rem;
-        position: absolute;*/
-
         justify-content: center;
         align-items: center;
         font-display:'header';
         font-size: 1 rem;
         position: absolute;
-        padding: 1rem 1.5rem;
+        padding: 1rem 1rem;
         color: $font-color;
        
 
@@ -57,61 +73,55 @@ $font-color: white;
         font-display:'header';
         font-size: 2em;
         position: absolute;
-        padding: 4.0rem 1.5rem;
+        padding: 4.0rem 0.1rem;
         margin: 0 16px 64px 16px;
     }
     &__songs{
-        justify-content: flex-start;
-        align-items: flex-start;
         position: absolute;
-        padding: 18rem 1.5rem;
-        border-radius: 15px;
+        margin: 270px 16px 16px 16px;
+        border-radius: 10px;
     }
 
-
+}
 .shows{
-    padding: 16px;
-    margin:16px;
     border-bottom: solid 2px rgba(128, 128, 128, 0.3);
     display: flex;
     flex-flow: column wrap;
        
     &__header{
-        margin: 32px auto 40px 16px;
+        margin:32px auto 40px 16px;
        
     }
     &__details{
         display: flex;
-        flex-flow: column wrap;
-    
+        flex-flow: column wrap;   
+        margin: 0 auto 16px 16px;
+        
         &__info{
-        font-size: 12px;
-        color:grey;
-        font-family: 'regular';
-        margin: 16px auto 24px 16px;
+            color: grey;
+            font-family: 'regular';
+            margin: 0 auto 16px 16px;
         }
-        &__info2{
-        font-family: 'demi';
-        font-size: 14px;
-        margin: 16px auto 24px 16px;
-        }
-        &__info3{
-        font-family: 'regular';
-        font-size: 12px;
-        margin: 0 auto 32px 16px;
-        }
-        &__button{
-        background-color: $background-color;
-        margin: auto 16px 16px 16px;
-        height:48px;
-        width: auto;
-        color: $font-color;
-        border-radius: 5px;
-        border-bottom: 2px solid rgba(128, 128, 128, 0.3);
-        border-bottom: 16px;
-        font-size: 1em;
 
+        &__info2{
+            font-size: 18px;
+            margin-left:16px;
+        }
+
+        &__info3{
+            margin-left: 16px;
+            font-family: 'regular';
+        }
+
+        &__button{
+            background-color: $background-color;
+            border-radius: 8px;
+            width: 288px;
+            height: 48px;
+            color: $font-color;
+            font-family: 'demi';
+            font-size: 18px;
+        }
        }
     }
-}
-}
+

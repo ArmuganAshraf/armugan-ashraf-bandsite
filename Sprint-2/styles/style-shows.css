@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "bold";
+  src: url("../Fonts/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "demi";
+  src: url("../Fonts/Linotype - AvenirNextLTPro-Demi.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "regular";
+  src: url("../Fonts/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
 .hero2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,10 +27,6 @@
 }
 
 .hero2__slogan {
-  /*flex-flow: row wrap;
-        font-display:'regular';
-        font-size: 1rem;
-        position: absolute;*/
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -25,7 +36,7 @@
   font-display: 'header';
   font-size: 1 rem;
   position: absolute;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   color: white;
 }
 
@@ -69,25 +80,17 @@
   font-display: 'header';
   font-size: 2em;
   position: absolute;
-  padding: 4.0rem 1.5rem;
+  padding: 4.0rem 0.1rem;
   margin: 0 16px 64px 16px;
 }
 
 .hero2__songs {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   position: absolute;
-  padding: 18rem 1.5rem;
-  border-radius: 15px;
+  margin: 270px 16px 16px 16px;
+  border-radius: 10px;
 }
 
-.hero2 .shows {
-  padding: 16px;
-  margin: 16px;
+.shows {
   border-bottom: solid 2px rgba(128, 128, 128, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,11 +101,11 @@
           flex-flow: column wrap;
 }
 
-.hero2 .shows__header {
+.shows__header {
   margin: 32px auto 40px 16px;
 }
 
-.hero2 .shows__details {
+.shows__details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,36 +113,32 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
+  margin: 0 auto 16px 16px;
 }
 
-.hero2 .shows__details__info {
-  font-size: 12px;
+.shows__details__info {
   color: grey;
   font-family: 'regular';
-  margin: 16px auto 24px 16px;
+  margin: 0 auto 16px 16px;
 }
 
-.hero2 .shows__details__info2 {
-  font-family: 'demi';
-  font-size: 14px;
-  margin: 16px auto 24px 16px;
+.shows__details__info2 {
+  font-size: 18px;
+  margin-left: 16px;
 }
 
-.hero2 .shows__details__info3 {
+.shows__details__info3 {
+  margin-left: 16px;
   font-family: 'regular';
-  font-size: 12px;
-  margin: 0 auto 32px 16px;
 }
 
-.hero2 .shows__details__button {
+.shows__details__button {
   background-color: black;
-  margin: auto 16px 16px 16px;
+  border-radius: 8px;
+  width: 288px;
   height: 48px;
-  width: auto;
   color: white;
-  border-radius: 5px;
-  border-bottom: 2px solid rgba(128, 128, 128, 0.3);
-  border-bottom: 16px;
-  font-size: 1em;
+  font-family: 'demi';
+  font-size: 18px;
 }
 /*# sourceMappingURL=style-shows.css.map */

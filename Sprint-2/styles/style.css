@@ -53,6 +53,7 @@ body {
 
 .header__menu {
   margin: 0 auto;
+  border: 2px solid black;
 }
 
 .title {
@@ -131,6 +132,7 @@ body {
 
 .menu__link1 {
   width: 160px;
+  border: black 2px  solid;
 }
 
 .menu a {
@@ -139,12 +141,31 @@ body {
 }
 
 .menu a:hover {
-  border-bottom: white 7px solid;
+  border-bottom: white 2px solid;
   padding: 16px;
 }
 
 .menu a:active {
-  border-bottom: white 7px solid;
+  border-bottom: white 2px solid;
+}
+
+.menu__link2 {
+  width: 160px;
+  border: black 2px  solid;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu a:hover {
+  border-bottom: white 2px solid;
+  padding: 16px;
+}
+
+.menu a:active {
+  border-bottom: white 2px solid;
 }
 
 .contains {
