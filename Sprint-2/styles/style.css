@@ -61,7 +61,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 80px;
-  margin: 0 auto;
   color: white;
 }
 
@@ -98,10 +97,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   font-family: 'demi';
   color: white;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-bottom: black 2px  solid;
+  padding-bottom: 10px;
 }
 
 @media screen and (min-width: 426px) {
@@ -132,7 +133,6 @@ body {
 
 .menu__link1 {
   width: 160px;
-  border: black 2px  solid;
 }
 
 .menu a {
@@ -142,7 +142,6 @@ body {
 
 .menu a:hover {
   border-bottom: white 2px solid;
-  padding: 16px;
 }
 
 .menu a:active {
@@ -161,7 +160,6 @@ body {
 
 .menu a:hover {
   border-bottom: white 2px solid;
-  padding: 16px;
 }
 
 .menu a:active {
