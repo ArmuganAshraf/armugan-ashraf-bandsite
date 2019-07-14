@@ -23,7 +23,6 @@
 }
 $background-color: black;
 $font-color: white;
-$comment_textColor: Black;
 $header-text-shadow:2px solid grey 0.2;
 
 body {
@@ -460,6 +459,29 @@ p{
     }
 }
 
+.sec_comments{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.3);
+
+    @media screen and (min-width:426px){
+        margin-right:124px;
+        margin-left: 124px;
+    }
+
+    @media screen and (min-width:769px){
+        margin: 2px 276px 24px 276px;
+    }
+
+        img{
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            margin-right: 16px;
+            margin-top: 15px;
+        }
+}
+
 .comments{
     display: flex;
     flex-direction: column;
@@ -486,20 +508,10 @@ p{
     
     &__user4{
         font-family: 'regular';
-        color: $comment_textColor;
+        color: $background-color;
         display: flex;
         flex-direction: row;
-
-        &__button{
-            background-color: $background-color;
-            color: $font-color;
-            border-radius: 5px;
-        }
-    
-    }
-
-    &__user1{
-        border-bottom: 2px solid rgba(128,128,128,0.3);
+        border-bottom: 2px solid rgba(128, 128, 128, 0.3);
 
         @media screen and (min-width:426px){
             margin-right:124px;
@@ -509,6 +521,81 @@ p{
         @media screen and (min-width:769px){
             margin: 24px 276px 24px 276px;
         }
+
+        img{
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            margin-right: 16px;
+            margin-top: 15px;
+        }
+
+        label{
+            font-family: 'demi';
+            font-size: 12px;
+            margin-bottom: 5px;
+            margin-top:10px;
+            color: rgba(128, 128, 128, 0.7);
+        }
+
+        form{
+            width: 224px;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        input{
+            background: #efefef;;
+            height: 50px;
+            border-radius: 8px;
+            border: solid 2px rgba(128, 128, 128, 0.3);
+            color: $background-color;
+            padding-left: 20px;
+            font-family: 'regular';
+
+            @media screen and (min-width:426px){
+                width: 450px;
+            }
+        }
+
+        textarea{
+            background:#EFEFEF;
+            height: 80px;
+            border-radius: 8px;
+            border: solid 2px rgba(128, 128, 128, 0.3);
+            padding-left: 20px;
+            padding-top: 10px;
+            font-family:'regular';
+            color: $background-color;
+
+            @media screen and (min-width:426px){
+                width: 450px;
+            }
+
+        }
+
+        &__button{
+            background-color: $background-color;
+            color: $font-color;
+            border-radius: 5px;
+            height: 50px;
+            margin-top: 10px;
+            box-shadow: black;
+            margin-bottom: 32px;
+
+            @media screen and (min-width:426px){
+                margin: 24px 0 24px 250px;
+                width:100%;
+
+            }
+        }
+    
+    }
+
+    &__user1{ 
         &__name{
             font-family: 'demi';
             justify-content:space-between;
@@ -521,6 +608,7 @@ p{
         &__date{
             color: grey;
             font-family: 'regular';
+            font-size: 12px;
 
             @media screen and (min-width:426px){
                 margin-left: 10px;
@@ -637,11 +725,11 @@ p{
         
             }
             
-            @media screen and (min-width:468px){
+            @media screen and (min-width:426px){
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: space-evenly;
-                margin-right:0;
+                width:auto;
             }
         }
         &__contact2{
@@ -672,8 +760,6 @@ p{
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: space-evenly;
-                margin-left: 0;
-                margin-right: 12px;
             }
 
             @media screen and (min-width:769px){

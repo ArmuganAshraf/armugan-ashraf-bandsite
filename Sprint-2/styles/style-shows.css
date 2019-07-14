@@ -52,10 +52,11 @@
   color: white;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 426px) {
   .contains2 .hero2__slogan {
+    margin: 120px auto auto 16px;
     font-size: 1rem;
-    padding: 4rem 15rem 15rem 7.7rem;
+    padding-right: 270px;
   }
 }
 
@@ -102,7 +103,7 @@
   width: 50%;
   position: absolute;
   margin: 250px 30px 16px 16px;
-  border-radius: 10px;
+  border-radius: 5%;
 }
 
 @media screen and (min-width: 426px) {
@@ -116,7 +117,7 @@
   .contains2 .hero2__songs {
     width: 436px;
     height: 146px;
-    margin: 400px 180px auto 700px;
+    margin: 300px 130px auto 730px;
   }
 }
 

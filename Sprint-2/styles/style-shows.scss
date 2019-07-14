@@ -53,9 +53,10 @@ $header-text-shadow:2px solid grey 0.2;
         
 
 
-            @media screen and (min-width:425px) {
+            @media screen and (min-width:426px) {
+                margin: 120px auto auto 16px; 
                 font-size: 1rem;
-                padding: 4rem 15rem 15rem 7.7rem;;
+                padding-right:270px;
             
             }
 
@@ -92,7 +93,7 @@ $header-text-shadow:2px solid grey 0.2;
             width: 50%;
             position: absolute;
             margin: 250px 30px 16px 16px;
-            border-radius: 10px;
+            border-radius: 5%;
 
             @media screen and (min-width:426px) {
                 margin: 400px 30px 24px 24px;
@@ -102,7 +103,7 @@ $header-text-shadow:2px solid grey 0.2;
             @media screen and (min-width:769px){
                 width: 436px;
                 height:146px;
-                margin: 400px 180px auto 700px;
+                margin: 300px 130px auto 730px;
             }
         }
 
