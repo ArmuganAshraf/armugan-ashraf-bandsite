@@ -23,6 +23,7 @@
 }
 $background-color: black;
 $font-color: white;
+$comment_textColor: Black;
 $header-text-shadow:2px solid grey 0.2;
 
 body {
@@ -459,6 +460,74 @@ p{
     }
 }
 
+.comments{
+    display: flex;
+    flex-direction: column;
+    margin: 24px 16px;
+    font-family: 'regular';
+
+
+    @media screen and (min-width:769px) {
+        margin: 48px 180px 56px 180px;    
+    }
+
+    h3{
+        font-size: 24px;
+        margin: 32px 16px 40px 0px;
+        font-family: 'bold';
+        display: flex;
+
+        @media screen and (min-width:426px){
+            font-size:34px;
+        }
+
+       
+    }
+    
+    &__user4{
+        font-family: 'regular';
+        color: $comment_textColor;
+        display: flex;
+        flex-direction: row;
+
+        &__button{
+            background-color: $background-color;
+            color: $font-color;
+            border-radius: 5px;
+        }
+    
+    }
+
+    &__user1{
+        border-bottom: 2px solid rgba(128,128,128,0.3);
+
+        @media screen and (min-width:426px){
+            margin-right:124px;
+            margin-left:124px;
+        }
+
+        @media screen and (min-width:769px){
+            margin: 24px 276px 24px 276px;
+        }
+        &__name{
+            font-family: 'demi';
+            justify-content:space-between;
+
+            @media screen and (min-width:426px){
+                justify-content: flex-start;
+            }
+        }
+
+        &__date{
+            color: grey;
+            font-family: 'regular';
+
+            @media screen and (min-width:426px){
+                margin-left: 10px;
+            }
+        }
+    }
+}
 .footer{
     @include header-footer-style();
     height: auto;
