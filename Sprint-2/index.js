@@ -5,7 +5,7 @@ function addToComments(){
     let commentHolder = document.getElementById('all_comments');
 
     let newInput = document.createElement('div');
-    newChild.classList.add('comments__user1');
+    newInput.classList.add('comments__user1');
 
     let name = document.createElement('p');
     name.classList.add('comments__user1__name');
