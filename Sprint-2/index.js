@@ -4,6 +4,12 @@ function addToComments(){
 
     let commentHolder = document.getElementById('all_comments');
 
+    let secComments = document.createElement('div');
+    secComments.classList.add('sec_comments');
+
+    let img = document.createElement("img");
+    img.src = "./images/grey.jpg";
+
     let newInput = document.createElement('div');
     newInput.classList.add('comments__user1');
 
@@ -24,9 +30,13 @@ function addToComments(){
     details_comment.innerHTML = newComment;
 
     name.append(span);
+
     newInput.append(name);
     newInput.append(details_comment);
 
-    commentHolder.prepend(newInput);
+    secComments.append(img);
+    secComments.append(newInput);
+
+    commentHolder.prepend(secComments);
 
 }
