@@ -12,7 +12,7 @@
     <section class="header">
         <div class="title">
             <h1 class="title__brand">
-            <a class="title__brand--link" href="./index.html"><img src="./Logo-bandsite.png"/></a>
+            <a class="title__brand--link" href="./index.html"><img src="./images/Logo-bandsite.png"/></a>
             </h1>
         </div>
         <div class="menu">
@@ -32,61 +32,61 @@
         </div> 
 <div class="shows">
 <h1 class="shows__header">Shows</h1>
-<div class="shows__details1">         
+<div class="shows__details1" id="0">         
                 <p class="shows__details1__info">DATES</p>
-                <p class="shows__details1__info2">Mon Dec 17 2018</p>
+                <p class="shows__details1__info2" id="date"></p>
                 <p class="shows__details1__info">VENUE</p>
-                <p class="shows__details1__info3">Ronald Lane</p>
+                <p class="shows__details1__info3" id="venue"></p>
                 <p class="shows__details1__info">LOCATION</p>
-                <p class="shows__details1__info3">San Fancisco, CA</p>
+                <p class="shows__details1__info3" id="location"></p>
                 <button class="shows__details1__button">BUY TICKETS</button>
 </div>
-<div class="shows__details2">         
+<div class="shows__details2" id="1">         
         <p class="shows__details2__info">DATES</p>
-        <p class="shows__details2__info2">Mon Dec 17 2018</p>
+        <p class="shows__details2__info2" id="date"></p>
         <p class="shows__details2__info">VENUE</p>
-        <p class="shows__details2__info3">Ronald Lane</p>
+        <p class="shows__details2__info3" id="venue"></p>
         <p class="shows__details2__info">LOCATION</p>
-        <p class="shows__details2__info3">San Fancisco, CA</p>
+        <p class="shows__details2__info3" id="location"></p>
         <button class="shows__details__button">BUY TICKETS</button>
 </div>
-<div class="shows__details">
+<div class="shows__details" id="2">
                 <p class="shows__details__info">DATES</p>
-                <p class="shows__details__info2">Tue Jul 18 2019</p>
+                <p class="shows__details__info2" id="date"></p>
                 <p class="shows__details__info">VENUE</p>
-                <p class="shows__details__info3">Pier 3 East</p>
+                <p class="shows__details__info3" id="venue"></p>
                 <p class="shows__details__info">LOCATION</p>
-                <p class="shows__details__info3">San Fancisco, CA</p>
+                <p class="shows__details__info3" id="location"></p>
                 <button class="shows__details__button">BUY TICKETS</button>
 </div>
-<div class="shows__details">
+<div class="shows__details" id="3">
                 <p class="shows__details__info">DATES</p>
-                <p class="shows__details__info2">Fri Jul 22 2019</p>
+                <p class="shows__details__info2" id="date"></p>
                 <p class="shows__details__info">VENUE</p>
-                <p class="shows__details__info3">View Lounge</p>
+                <p class="shows__details__info3" id="venue"></p>
                 <p class="shows__details__info">LOCATION</p>
-                <p class="shows__details__info3">San Fancisco, CA</p>
+                <p class="shows__details__info3" id="location"></p>
                 <button class="shows__details__button">BUY TICKETS</button>        
 </div>
-<div class="shows__details">
+<div class="shows__details" id="4">
                 <p class="shows__details__info">DATES</p>
-                <p class="shows__details__info2">Sat Aug 12 2019</p>
+                <p class="shows__details__info2" id="date"></p>
                 <p class="shows__details__info">VENUE</p>
-                <p class="shows__details__info3">Hyatt Agency</p>
+                <p class="shows__details__info3" id="venue"></p>
                 <p class="shows__details__info">LOCATION</p>
-                <p class="shows__details__info3">San Fancisco, CA</p>
+                <p class="shows__details__info3" id="location"></p>
                 <button class="shows__details__button">BUY TICKETS</button>
 </div>
-<div class="shows__details">
+<div class="shows__details" id="5">
                 <p class="shows__details__info">DATES</p>
-                <p class="shows__details__info2">Fri Sep 05 2019</p>
+                <p class="shows__details__info2" id="date"></p>
                 <p class="shows__details__info">VENUE</p>
-                <p class="shows__details__info3">Moscow Center</p>
+                <p class="shows__details__info3" id="venue"></p>
                 <p class="shows__details__info">LOCATION</p>
-                <p class="shows__details__info3">San Fancisco, CA</p>
+                <p class="shows__details__info3" id="location"></p>
                 <button class="shows__details__button">BUY TICKETS</button>
 </div>
-<div class="shows__details">
+<!--<div class="shows__details">
                 <p class="shows__details__info">DATES</p>
                 <p class="shows__details__info2">Sat Aug 12 2019</p>
                 <p class="shows__details__info">VENUE</p> 
@@ -94,7 +94,7 @@
                 <p class="shows__details__info">LOCATION</p>
                 <p class="shows__details__info3">San Fancisco, CA</p>
                 <button class="shows__details__button">BUY TICKETS</button>
-        </div>
+        </div>-->
 </div>
 </div>
 <div class="footer">
@@ -105,7 +105,7 @@
                 <img src="./images/facebook.png"  alt="facebook"/>
                 <img src="./images/twitter.png"  alt="twitter"/>
         <div class="footer__logo__icon">
-         <img src="./Logo-bandsite.png" alt="logo"/>
+         <img src="./images/Logo-bandsite.png" alt="logo"/>
         </div>
        </div>
     </div>
@@ -186,6 +186,8 @@
         </div>
     </div>
 </div>
-</main> 
+</main>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="./shows.js"></script>
 </body>
 </html>
