@@ -1,6 +1,67 @@
-function addToComments(){
-    let newName = document.getElementById('name').value;
-    let newComment = document.getElementById('comments').value;
+const apiKey  = '6729f518-b29e-4f0f-959b-ee5dafb5b5fd';
+
+let commentsArray;
+
+window.addEventListener('load',() => {
+  console.log('doc is ready');
+
+  axios.get('https://project-1-api.herokuapp.com/comments?api_key='+apiKey)
+  .then(function (response) {
+    // handle success
+    console.log(response.data);
+    commentsArray = response.data;
+    populateComments();
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  });
+});
+
+document.getElementById("btnComments").addEventListener("click", () => {
+  console.log("button clicked");
+
+  let newName = document.getElementById('name').value;
+  let newComment = document.getElementById('comments').value;
+  
+  let headers = {
+    'Content-Type': 'application/json'
+  };
+
+  axios.post('https://project-1-api.herokuapp.com/comments?api_key='+apiKey,{
+    name: newName,
+    comment: newComment
+  },{headers: headers})
+  .then(function (response) {
+    console.log(response);
+    commentsArray.push(response.data);
+    addToComments(response.data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+});
+
+function populateComments(){
+  /*for(i = commentsArray.length - 1; i >= 0; i--){
+    addToComments(commentsArray[i]);
+  }*/
+
+  for(i = 0; i < commentsArray.length; i++){
+    addToComments(commentsArray[i]);
+  }
+}
+
+function addToComments(comment){
+    //let newName = document.getElementById('name').value;
+    //let newComment = document.getElementById('comments').value;
+
+    let newName = comment["name"];
+    let newComment = comment["comment"];
+    //got the new date solution from Google
+    let date = new Date(comment["timestamp"]);
+    let convertedDate = date.getMonth()+1+"/"+date.getDate() + "/" + date.getFullYear();
 
     let commentHolder = document.getElementById('all_comments');
 
@@ -20,10 +81,7 @@ function addToComments(){
     let span = document.createElement('span');
     span.classList.add('comments__user1__date');
 
-    //got the new date solution from Google
-    let date = new Date();
-    let str = date.getMonth()+"/"+date.getDate() + "/" + date.getFullYear();
-    span.innerHTML = str;
+    span.innerHTML = convertedDate;
 
     let details_comment = document.createElement('p');
     details_comment.classList.add('comments__user1__comment');

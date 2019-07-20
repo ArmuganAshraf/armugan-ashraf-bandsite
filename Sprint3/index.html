@@ -7,13 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/style-shows.css">
-  <script type="text/javascript" src="./index.js"></script>
 </head>
 <body>
     <section class="header">
                     <div class="title">
                         <h1 class="title__brand">
-                        <a class="title__brand--link" href="./index.html"><img src="./Logo-bandsite.png"/></a>
+                        <a class="title__brand--link" href="./index.html"><img src="./images/Logo-bandsite.png"/></a>
                         </h1>
                     </div>
                     <div class="menu">
@@ -93,12 +92,12 @@
                                         <textarea type="text" id="comments" name="comments" placeholder="Add a new comment"></textarea>
                                 </div>
                                 <div>
-                                        <button type="button" class="comments__user4__button" onclick="addToComments()">COMMENT</button>
+                                        <button type="button" id="btnComments" class="comments__user4__button">COMMENT</button>
                                 </div>
                         </form>     
                 </div>
                 <div id="all_comments">
-                        <div class="sec_comments">
+                        <!--<div class="sec_comments">
                                 <img src="./images/grey.jpg"/>
                                 <div class="comments__user1">
                                                 <p class="comments__user1__name">Micheal Lyons
@@ -130,9 +129,7 @@
                                                 loves to do it every day. Everytime I
                                                 see him I feel instantly happy! He’s
                                                 definitely my favorite ever!</p></div>
-                        </div>
-                                
-                        
+                        </div>-->
                 </div>
                 
         </section>
@@ -144,7 +141,7 @@
                         <img src="./images/facebook.png"  alt="facebook"/>
                         <img src="./images/twitter.png"  alt="twitter"/>
                 <div class="footer__logo__icon">
-                 <img src="./Logo-bandsite.png" alt="logo"/>
+                 <img src="./images/Logo-bandsite.png" alt="logo"/>
                 </div>
                </div>
             </div>
@@ -226,6 +223,7 @@
             </div>
         </div>
     </main>
-    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
