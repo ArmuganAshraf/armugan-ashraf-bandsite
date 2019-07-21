@@ -32,7 +32,6 @@ body {
 
 .header {
     @include header-footer-style();
-    //display: flex;
 
     @media screen and (min-width:426px){
         flex-direction: row;
@@ -75,18 +74,18 @@ body {
     img{
         width: 100%;
         size: 2rem;
-        
+        margin-bottom: 7px;
     }
   }
 
   .menu {
     font-family: 'demi';
     color:$font-color;
-    //border-bottom: black 2px  solid;
     display: flex;
     height: 40px;
     width: 100%;
-    align-items: center;
+    margin-bottom: -2px;
+    justify-content: center;
     
     @media screen and (min-width:426px){
         flex-flow: row wrap;
@@ -118,16 +117,10 @@ body {
         text-decoration: none;
         color:$font-color;
 
-        &:hover{
+        &:hover, &:active{
             border-bottom: $font-color 5px solid;
           
         }
-
-        &:active{
-            border-bottom: $font-color 5px solid;
-            
-        }
-
     }
 
     &__link2{
@@ -148,15 +141,8 @@ body {
         color:$font-color;
 
         &:hover{
-            border-bottom: $font-color 5px solid;
-           
+            border-bottom: $font-color 5px solid;   
         }
-
-        &:active{
-            border-bottom: $font-color 5px solid;
-
-        }
-
     }
 }
 
@@ -167,7 +153,6 @@ body {
 
 .hero {
     display: flex;
-    width: 100%;
     margin: 0;
     color: $font-color;
   
@@ -176,13 +161,12 @@ body {
       width: 100%;
       height: 183px;
 
-        @media screen and (min-width:426px) {
+        @media screen and (min-width:426px) and (max-width:769px){
         height: 400px;
-        width: 100%;;
+        object-fit: cover;
         }
 
         @media screen and (min-width:769px) {
-          width: auto;  
           height:670px;
         }
 
@@ -269,13 +253,14 @@ p{
 
         @media screen and (min-width:426px){
             padding: 10px 24px;
-            width: 720px;
-            height: 362px;   
+            height: auto;   
+            object-fit: cover;
         }
 
         @media screen and (min-width:769px) {
-            width: 869px;
+            width: auto;
             height: 450px;
+            margin-left: 24px;
         }
     }
     
@@ -292,7 +277,7 @@ p{
 
         @media screen and (min-width:769px) {
             font-size: 28px; 
-            margin: 48px 280px 32px 280px;
+            margin: 48px auto 32px auto;
         }
     }
     &__initials {
@@ -375,7 +360,7 @@ p{
         }
 
         @media screen and (min-width:426px) {
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
         }
 
         @media screen and (min-width:769px) {
@@ -429,6 +414,7 @@ p{
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
+        align-items: center;
 
         @media screen and (min-width: 426px) {
             flex-flow: row wrap;
@@ -444,6 +430,7 @@ p{
     img{
         width: 288px;
         margin: 0px 16px 16px 16px;
+        justify-content: center;
 
         @media screen and (min-width:426px) {
             width: 224px;
@@ -487,6 +474,7 @@ p{
     flex-direction: column;
     margin: 24px 16px;
     font-family: 'regular';
+    justify-content: center;
 
 
     @media screen and (min-width:769px) {
@@ -550,6 +538,7 @@ p{
         input{
             background: #efefef;;
             height: 50px;
+            width: 100%;
             border-radius: 8px;
             border: solid 2px rgba(128, 128, 128, 0.3);
             color: $background-color;
@@ -557,7 +546,7 @@ p{
             font-family: 'regular';
 
             @media screen and (min-width:426px){
-                width: 450px;
+                width: 100%;
             }
         }
 
@@ -570,9 +559,10 @@ p{
             padding-top: 10px;
             font-family:'regular';
             color: $background-color;
+            width: 100%;
 
             @media screen and (min-width:426px){
-                width: 450px;
+                width: 100%;
             }
 
         }
@@ -582,12 +572,14 @@ p{
             color: $font-color;
             border-radius: 5px;
             height: 50px;
+            width: 80%;
             margin-top: 10px;
+            margin-left:70px;;
             box-shadow: black;
             margin-bottom: 32px;
 
             @media screen and (min-width:426px){
-                margin: 24px 0 24px 250px;
+                margin: 24px 0 24px 0;
                 width:100%;
 
             }
@@ -599,12 +591,12 @@ p{
         &__name{
             font-family: 'demi';
             justify-content:space-between;
+            width: 70%;
 
             @media screen and (min-width:426px){
                 justify-content: flex-start;
             }
         }
-
         &__date{
             color: grey;
             font-family: 'regular';
@@ -623,6 +615,7 @@ p{
 
     @media screen and (min-width:426px) {
         flex-flow: row wrap;  
+
     }
 
     &__logo{
@@ -633,7 +626,9 @@ p{
             flex-flow: row wrap;
             width: 100%;
         }
-
+        @media (min-width:769px) and (max-width:1330px){
+          flex-flow: row nowrap;
+        }
         &__icon{
             display: none;
             
@@ -657,7 +652,7 @@ p{
             font-weight: bold;
             font-family:'bold';
             font-size: 2.3rem;
-    
+
             @media screen and (min-width:769px){
                 margin:48px 64px 56px 180px; 
             }
@@ -676,10 +671,6 @@ p{
             }
 
             @media screen and (min-width:769px){
-                position: relative;
-                align-items: center;
-                width: 65%;
-
                 img{
                     display: flex;
                     margin-right: 32px;
@@ -693,8 +684,8 @@ p{
         display: flex;
         flex-direction: column;
 
-        @media screen and (min-width:426px) {
-            flex-direction: row;
+        @media screen and (min-width:723px){
+            flex-flow: row nowrap;
         }
 
         @media screen and (min-width:769px){
@@ -759,7 +750,8 @@ p{
             @media screen and (min-width:426px){
                 display: flex;
                 flex-flow: column nowrap;
-                justify-content: space-evenly;
+                justify-content: space-between;
+                align-self: flex-start;
             }
 
             @media screen and (min-width:769px){
@@ -773,7 +765,7 @@ p{
         margin: 16px;
         font-family: 'regular';
 
-        @media screen and (min-width:425px){
+        @media screen and (min-width:426px){
             display:flex;
             flex-flow: row wrap;
 
@@ -787,7 +779,7 @@ p{
             margin-left:180px;
 
             &__line1{
-                margin-left:5px;
+                margin-left:5px; // for making spaces between the copywrite
             }
         }
     }
