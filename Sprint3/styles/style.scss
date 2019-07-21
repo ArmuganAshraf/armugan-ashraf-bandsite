@@ -279,6 +279,10 @@ p{
             font-size: 28px; 
             margin: 48px auto 32px auto;
         }
+
+        @media screen and (min-width:1024px){
+          margin: 0 140px 0 140px;
+        }
     }
     &__initials {
         flex-direction: row;
@@ -297,6 +301,10 @@ p{
             font-size: 20px; 
             margin: 15px 280px 16px 280px;
         }
+
+        @media screen and (min-width:1024px){
+            margin: 0 380px 16px 140px;
+        }
     }
 }
 .article{
@@ -313,6 +321,11 @@ p{
         margin: 15px 280px 32px 250px;
     }
 
+    @media screen and (min-width:1024px){
+       flex-flow: column wrap;
+       margin: 15px 200px 32px 140px;
+    }
+
 &__name{
         align-self: flex-start;
         font-family: 'bold';
@@ -325,7 +338,7 @@ p{
         }
 
         @media screen and (min-width:769px) {
-            font-size: 1.5rem;
+            font-size: 1.9rem;
             margin: 0 16px 24px 180px;
         }
 
@@ -406,7 +419,7 @@ p{
 
         @media screen and (min-width: 769px) {
             align-self: flex-start;
-            margin: 32px 16px 24px 180px;
+            margin: 32px 16px 24px 160px;
         }
     }
 
@@ -476,11 +489,6 @@ p{
     font-family: 'regular';
     justify-content: center;
 
-
-    @media screen and (min-width:769px) {
-        margin: 48px 180px 56px 180px;    
-    }
-
     h3{
         font-size: 24px;
         margin: 32px 16px 40px 0px;
@@ -491,6 +499,10 @@ p{
             font-size:34px;
         }
 
+        @media screen and (min-width:1024px){
+          margin-left: 0;
+        }
+
        
     }
     
@@ -498,18 +510,27 @@ p{
         font-family: 'regular';
         color: $background-color;
         display: flex;
+        justify-content: center;
         flex-direction: row;
         border-bottom: 2px solid rgba(128, 128, 128, 0.3);
 
         @media screen and (min-width:426px){
-            margin-right:124px;
-            margin-left:124px;
-        }
+          justify-content: flex-start;
+          margin-left: 64px;
 
-        @media screen and (min-width:769px){
-            margin: 24px 276px 24px 276px;
-        }
+      }
 
+        @media screen and (min-width:768px){
+            margin: 24px 0 24px 100px;
+
+        }
+        @media screen and (min-width:1024px){
+            margin:24px 0 24px 240px;
+        }
+        
+        @media screen and (min-width:1440px) {
+          width: 60%;
+        }
         img{
             width: 60px;
             height: 60px;
@@ -542,11 +563,16 @@ p{
             border-radius: 8px;
             border: solid 2px rgba(128, 128, 128, 0.3);
             color: $background-color;
-            padding-left: 20px;
             font-family: 'regular';
 
             @media screen and (min-width:426px){
-                width: 100%;
+                width: 500px;
+            }
+            @media screen and (min-width:1024px) {
+                width: 400px;     
+            }
+            @media screen and (min-width:1440px) {
+              width: 780px;
             }
         }
 
@@ -555,15 +581,20 @@ p{
             height: 80px;
             border-radius: 8px;
             border: solid 2px rgba(128, 128, 128, 0.3);
-            padding-left: 20px;
             padding-top: 10px;
             font-family:'regular';
             color: $background-color;
             width: 100%;
 
             @media screen and (min-width:426px){
-                width: 100%;
+                width: 500px;
             }
+            @media screen and (min-width:1024px) {
+              width: 400px;
+          }
+          @media screen and (min-width:1440px) {
+            width: 780px;
+          }
 
         }
 
@@ -574,20 +605,27 @@ p{
             height: 50px;
             width: 80%;
             margin-top: 10px;
-            margin-left:70px;;
+            margin-left:50px;;
             box-shadow: black;
             margin-bottom: 32px;
 
             @media screen and (min-width:426px){
-                margin: 24px 0 24px 0;
+                margin: 24px 0 24px 280px;
                 width:100%;
 
             }
+            @media screen and (min-width:1024px) {
+              width:130px;
+          }
+            @media screen and (min-width:1440px) {
+              width: 200px;
+              margin-left: 580px;
+          }
         }
     
     }
 
-    &__user1{ 
+    &__user1{
         &__name{
             font-family: 'demi';
             justify-content:space-between;

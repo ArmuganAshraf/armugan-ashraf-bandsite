@@ -386,6 +386,12 @@ p {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .details__dialog {
+    margin: 0 140px 0 140px;
+  }
+}
+
 .details__initials {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -410,6 +416,12 @@ p {
   .details__initials {
     font-size: 20px;
     margin: 15px 280px 16px 280px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .details__initials {
+    margin: 0 380px 16px 140px;
   }
 }
 
@@ -441,6 +453,16 @@ p {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    margin: 15px 200px 32px 140px;
+  }
+}
+
 .article__name {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -458,7 +480,7 @@ p {
 
 @media screen and (min-width: 769px) {
   .article__name {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     margin: 0 16px 24px 180px;
   }
 }
@@ -580,7 +602,7 @@ p {
   .gallery h3 {
     -ms-flex-item-align: start;
         align-self: flex-start;
-    margin: 32px 16px 24px 180px;
+    margin: 32px 16px 24px 160px;
   }
 }
 
@@ -695,12 +717,6 @@ p {
           justify-content: center;
 }
 
-@media screen and (min-width: 769px) {
-  .comments {
-    margin: 48px 180px 56px 180px;
-  }
-}
-
 .comments h3 {
   font-size: 24px;
   margin: 32px 16px 40px 0px;
@@ -716,12 +732,21 @@ p {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .comments h3 {
+    margin-left: 0;
+  }
+}
+
 .comments__user4 {
   font-family: 'regular';
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -731,14 +756,28 @@ p {
 
 @media screen and (min-width: 426px) {
   .comments__user4 {
-    margin-right: 124px;
-    margin-left: 124px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 64px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .comments__user4 {
-    margin: 24px 276px 24px 276px;
+    margin: 24px 0 24px 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .comments__user4 {
+    margin: 24px 0 24px 240px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .comments__user4 {
+    width: 60%;
   }
 }
 
@@ -779,13 +818,24 @@ p {
   border-radius: 8px;
   border: solid 2px rgba(128, 128, 128, 0.3);
   color: black;
-  padding-left: 20px;
   font-family: 'regular';
 }
 
 @media screen and (min-width: 426px) {
   .comments__user4 input {
-    width: 100%;
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .comments__user4 input {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .comments__user4 input {
+    width: 780px;
   }
 }
 
@@ -794,7 +844,6 @@ p {
   height: 80px;
   border-radius: 8px;
   border: solid 2px rgba(128, 128, 128, 0.3);
-  padding-left: 20px;
   padding-top: 10px;
   font-family: 'regular';
   color: black;
@@ -803,7 +852,19 @@ p {
 
 @media screen and (min-width: 426px) {
   .comments__user4 textarea {
-    width: 100%;
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .comments__user4 textarea {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .comments__user4 textarea {
+    width: 780px;
   }
 }
 
@@ -814,7 +875,7 @@ p {
   height: 50px;
   width: 80%;
   margin-top: 10px;
-  margin-left: 70px;
+  margin-left: 50px;
   -webkit-box-shadow: black;
           box-shadow: black;
   margin-bottom: 32px;
@@ -822,8 +883,21 @@ p {
 
 @media screen and (min-width: 426px) {
   .comments__user4__button {
-    margin: 24px 0 24px 0;
+    margin: 24px 0 24px 280px;
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .comments__user4__button {
+    width: 130px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .comments__user4__button {
+    width: 200px;
+    margin-left: 580px;
   }
 }
 
