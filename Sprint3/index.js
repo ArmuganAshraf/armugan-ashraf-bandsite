@@ -2,18 +2,15 @@ const apiKey  = '6729f518-b29e-4f0f-959b-ee5dafb5b5fd';
 
 let commentsArray;
 
-window.addEventListener('load',() => {
-  console.log('doc is ready');
+window.addEventListener('load',() => { //used this function example from the axios lecture slides
 
   axios.get('https://project-1-api.herokuapp.com/comments?api_key='+apiKey)
   .then(function (response) {
-    // handle success
-    console.log(response.data);
+    console.log(response.data);// used console several places to make sure function is working
     commentsArray = response.data;
     populateComments();
   })
   .catch(function (error) {
-    // handle error
     console.log(error);
   });
 });
